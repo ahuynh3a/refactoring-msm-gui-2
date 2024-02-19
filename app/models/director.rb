@@ -13,6 +13,8 @@
 class Director < ApplicationRecord
   validates(:name, presence: true)
 
+  has_many(:filmography, class_name:"Movie")
+=begin
   def filmography
     key = self.id
 
@@ -20,4 +22,5 @@ class Director < ApplicationRecord
 
     return the_many
   end
+=end
 end
